@@ -69,7 +69,7 @@ usually just invert the logic defined in the predicate function. But this will
 return the index `j` of the leftmost element that does _not_ satisfy the condition.
 So I end up having to check if `j-1` exists.
 
-Another restraint of this `Search` method is that the range only starts from `0`.
+Another constraint of this `Search` method is that the range only starts from `0`.
 Maybe we can do some offset tricks in the predicate function so we can search
 any subarray of the original array (again, I am not sure if this is the best
 practice). So, sometimes I will just implement my own search functions if it will
