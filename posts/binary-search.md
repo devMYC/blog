@@ -61,7 +61,7 @@ func Search(n int, f func(int) bool) int
 ```
 
 Given an integer `n` and a predicate function `f`. It will return the leftmost
-index `i` such that `f(i) == true` where `i` is in range `[0, n)`. But instead
+index `i` such that `f(i) == true` where `i` is in range \\([0,n)\\). But instead
 of returning `-1` as the "not found" value, it returns `n`. This is really
 convenient for finding the lower bound that satisfies the predicate. And for
 the upper bound, I am not sure if there's a better way of doing this, but I
@@ -109,6 +109,6 @@ func upperbound(start, end int, pred func(int) bool) int {
 
 Binary search is one of those simple and powerful algorithms. If you leverage
 it in appropriate situations, it can really help you speed up things because its
-`log(n)` runtime complexity. Also, there could be more variations than the ones
+\\(\log_2{n}\\) runtime complexity. Also, there could be more variations than the ones
 I mentioned above. So I will keep exploring and update this post once I find
 something interesting.
