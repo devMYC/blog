@@ -1,0 +1,132 @@
+<svg class='diagram' xmlns='http://www.w3.org/2000/svg' version='1.1' height='505' width='328'>
+<g transform='translate(8,16)'>
+<path d='M 16,16 L 32,16' fill='none' stroke='currentColor'></path>
+<path d='M 80,16 L 96,16' fill='none' stroke='currentColor'></path>
+<path d='M 16,176 L 32,176' fill='none' stroke='currentColor'></path>
+<path d='M 80,176 L 96,176' fill='none' stroke='currentColor'></path>
+<path d='M 200,176 L 272,176' fill='none' stroke='currentColor'></path>
+<path d='M 72,320 L 280,320' fill='none' stroke='currentColor'></path>
+<path d='M 16,384 L 32,384' fill='none' stroke='currentColor'></path>
+<path d='M 80,384 L 96,384' fill='none' stroke='currentColor'></path>
+<path d='M 200,384 L 272,384' fill='none' stroke='currentColor'></path>
+<path d='M 16,16 L 16,48' fill='none' stroke='currentColor'></path>
+<path d='M 16,176 L 16,208' fill='none' stroke='currentColor'></path>
+<path d='M 16,384 L 16,416' fill='none' stroke='currentColor'></path>
+<path d='M 56,336 L 56,352' fill='none' stroke='currentColor'></path>
+<path d='M 96,16 L 96,48' fill='none' stroke='currentColor'></path>
+<path d='M 96,176 L 96,208' fill='none' stroke='currentColor'></path>
+<path d='M 96,384 L 96,416' fill='none' stroke='currentColor'></path>
+<path d='M 296,48 L 296,80' fill='none' stroke='currentColor'></path>
+<path d='M 296,208 L 296,240' fill='none' stroke='currentColor'></path>
+<path d='M 296,336 L 296,368' fill='none' stroke='currentColor'></path>
+<path d='M 296,416 L 296,448' fill='none' stroke='currentColor'></path>
+<polygon points='40.000000,16.000000 28.000000,10.400000 28.000000,21.600000' fill='currentColor' transform='rotate(0.000000, 32.000000, 16.000000)'></polygon>
+<polygon points='40.000000,176.000000 28.000000,170.399994 28.000000,181.600006' fill='currentColor' transform='rotate(0.000000, 32.000000, 176.000000)'></polygon>
+<polygon points='40.000000,384.000000 28.000000,378.399994 28.000000,389.600006' fill='currentColor' transform='rotate(0.000000, 32.000000, 384.000000)'></polygon>
+<path d='M 56,352 L 56,360' fill='none' stroke='currentColor'></path>
+<polygon points='72.000000,352.000000 60.000000,346.399994 60.000000,357.600006' fill='currentColor' transform='rotate(90.000000, 56.000000, 352.000000)'></polygon>
+<polygon points='88.000000,16.000000 76.000000,10.400000 76.000000,21.600000' fill='currentColor' transform='rotate(180.000000, 80.000000, 16.000000)'></polygon>
+<polygon points='88.000000,176.000000 76.000000,170.399994 76.000000,181.600006' fill='currentColor' transform='rotate(180.000000, 80.000000, 176.000000)'></polygon>
+<polygon points='88.000000,384.000000 76.000000,378.399994 76.000000,389.600006' fill='currentColor' transform='rotate(180.000000, 80.000000, 384.000000)'></polygon>
+<polygon points='280.000000,176.000000 268.000000,170.399994 268.000000,181.600006' fill='currentColor' transform='rotate(0.000000, 272.000000, 176.000000)'></polygon>
+<polygon points='280.000000,384.000000 268.000000,378.399994 268.000000,389.600006' fill='currentColor' transform='rotate(0.000000, 272.000000, 384.000000)'></polygon>
+<path d='M 296,40 L 296,48' fill='none' stroke='currentColor'></path>
+<polygon points='312.000000,48.000000 300.000000,42.400002 300.000000,53.599998' fill='currentColor' transform='rotate(270.000000, 296.000000, 48.000000)'></polygon>
+<path d='M 296,200 L 296,208' fill='none' stroke='currentColor'></path>
+<polygon points='312.000000,208.000000 300.000000,202.399994 300.000000,213.600006' fill='currentColor' transform='rotate(270.000000, 296.000000, 208.000000)'></polygon>
+<path d='M 296,408 L 296,416' fill='none' stroke='currentColor'></path>
+<polygon points='312.000000,416.000000 300.000000,410.399994 300.000000,421.600006' fill='currentColor' transform='rotate(270.000000, 296.000000, 416.000000)'></polygon>
+<path d='M 56,0 A 16,16 0 0,0 40,16' fill='none' stroke='currentColor'></path>
+<path d='M 56,0 A 16,16 0 0,1 72,16' fill='none' stroke='currentColor'></path>
+<path d='M 184,0 A 16,16 0 0,0 168,16' fill='none' stroke='currentColor'></path>
+<path d='M 184,0 A 16,16 0 0,1 200,16' fill='none' stroke='currentColor'></path>
+<path d='M 296,0 A 16,16 0 0,0 280,16' fill='none' stroke='currentColor'></path>
+<path d='M 296,0 A 16,16 0 0,1 312,16' fill='none' stroke='currentColor'></path>
+<path d='M 40,16 A 16,16 0 0,0 56,32' fill='none' stroke='currentColor'></path>
+<path d='M 72,16 A 16,16 0 0,1 56,32' fill='none' stroke='currentColor'></path>
+<path d='M 168,16 A 16,16 0 0,0 184,32' fill='none' stroke='currentColor'></path>
+<path d='M 200,16 A 16,16 0 0,1 184,32' fill='none' stroke='currentColor'></path>
+<path d='M 280,16 A 16,16 0 0,0 296,32' fill='none' stroke='currentColor'></path>
+<path d='M 312,16 A 16,16 0 0,1 296,32' fill='none' stroke='currentColor'></path>
+<path d='M 16,48 A 16,16 0 0,0 0,64' fill='none' stroke='currentColor'></path>
+<path d='M 16,48 A 16,16 0 0,1 32,64' fill='none' stroke='currentColor'></path>
+<path d='M 96,48 A 16,16 0 0,0 80,64' fill='none' stroke='currentColor'></path>
+<path d='M 96,48 A 16,16 0 0,1 112,64' fill='none' stroke='currentColor'></path>
+<path d='M 0,64 A 16,16 0 0,0 16,80' fill='none' stroke='currentColor'></path>
+<path d='M 32,64 A 16,16 0 0,1 16,80' fill='none' stroke='currentColor'></path>
+<path d='M 80,64 A 16,16 0 0,0 96,80' fill='none' stroke='currentColor'></path>
+<path d='M 112,64 A 16,16 0 0,1 96,80' fill='none' stroke='currentColor'></path>
+<path d='M 296,80 A 16,16 0 0,0 280,96' fill='none' stroke='currentColor'></path>
+<path d='M 296,80 A 16,16 0 0,1 312,96' fill='none' stroke='currentColor'></path>
+<path d='M 280,96 A 16,16 0 0,0 296,112' fill='none' stroke='currentColor'></path>
+<path d='M 312,96 A 16,16 0 0,1 296,112' fill='none' stroke='currentColor'></path>
+<path d='M 56,160 A 16,16 0 0,0 40,176' fill='none' stroke='currentColor'></path>
+<path d='M 56,160 A 16,16 0 0,1 72,176' fill='none' stroke='currentColor'></path>
+<path d='M 184,160 A 16,16 0 0,0 168,176' fill='none' stroke='currentColor'></path>
+<path d='M 184,160 A 16,16 0 0,1 200,176' fill='none' stroke='currentColor'></path>
+<path d='M 296,160 A 16,16 0 0,0 280,176' fill='none' stroke='currentColor'></path>
+<path d='M 296,160 A 16,16 0 0,1 312,176' fill='none' stroke='currentColor'></path>
+<path d='M 40,176 A 16,16 0 0,0 56,192' fill='none' stroke='currentColor'></path>
+<path d='M 72,176 A 16,16 0 0,1 56,192' fill='none' stroke='currentColor'></path>
+<path d='M 168,176 A 16,16 0 0,0 184,192' fill='none' stroke='currentColor'></path>
+<path d='M 200,176 A 16,16 0 0,1 184,192' fill='none' stroke='currentColor'></path>
+<path d='M 280,176 A 16,16 0 0,0 296,192' fill='none' stroke='currentColor'></path>
+<path d='M 312,176 A 16,16 0 0,1 296,192' fill='none' stroke='currentColor'></path>
+<path d='M 16,208 A 16,16 0 0,0 0,224' fill='none' stroke='currentColor'></path>
+<path d='M 16,208 A 16,16 0 0,1 32,224' fill='none' stroke='currentColor'></path>
+<path d='M 96,208 A 16,16 0 0,0 80,224' fill='none' stroke='currentColor'></path>
+<path d='M 96,208 A 16,16 0 0,1 112,224' fill='none' stroke='currentColor'></path>
+<path d='M 0,224 A 16,16 0 0,0 16,240' fill='none' stroke='currentColor'></path>
+<path d='M 32,224 A 16,16 0 0,1 16,240' fill='none' stroke='currentColor'></path>
+<path d='M 80,224 A 16,16 0 0,0 96,240' fill='none' stroke='currentColor'></path>
+<path d='M 112,224 A 16,16 0 0,1 96,240' fill='none' stroke='currentColor'></path>
+<path d='M 296,240 A 16,16 0 0,0 280,256' fill='none' stroke='currentColor'></path>
+<path d='M 296,240 A 16,16 0 0,1 312,256' fill='none' stroke='currentColor'></path>
+<path d='M 280,256 A 16,16 0 0,0 296,272' fill='none' stroke='currentColor'></path>
+<path d='M 312,256 A 16,16 0 0,1 296,272' fill='none' stroke='currentColor'></path>
+<path d='M 72,320 A 16,16 0 0,0 56,336' fill='none' stroke='currentColor'></path>
+<path d='M 280,320 A 16,16 0 0,1 296,336' fill='none' stroke='currentColor'></path>
+<path d='M 56,368 A 16,16 0 0,0 40,384' fill='none' stroke='currentColor'></path>
+<path d='M 56,368 A 16,16 0 0,1 72,384' fill='none' stroke='currentColor'></path>
+<path d='M 184,368 A 16,16 0 0,0 168,384' fill='none' stroke='currentColor'></path>
+<path d='M 184,368 A 16,16 0 0,1 200,384' fill='none' stroke='currentColor'></path>
+<path d='M 296,368 A 16,16 0 0,0 280,384' fill='none' stroke='currentColor'></path>
+<path d='M 296,368 A 16,16 0 0,1 312,384' fill='none' stroke='currentColor'></path>
+<path d='M 40,384 A 16,16 0 0,0 56,400' fill='none' stroke='currentColor'></path>
+<path d='M 72,384 A 16,16 0 0,1 56,400' fill='none' stroke='currentColor'></path>
+<path d='M 168,384 A 16,16 0 0,0 184,400' fill='none' stroke='currentColor'></path>
+<path d='M 200,384 A 16,16 0 0,1 184,400' fill='none' stroke='currentColor'></path>
+<path d='M 280,384 A 16,16 0 0,0 296,400' fill='none' stroke='currentColor'></path>
+<path d='M 312,384 A 16,16 0 0,1 296,400' fill='none' stroke='currentColor'></path>
+<path d='M 16,416 A 16,16 0 0,0 0,432' fill='none' stroke='currentColor'></path>
+<path d='M 16,416 A 16,16 0 0,1 32,432' fill='none' stroke='currentColor'></path>
+<path d='M 96,416 A 16,16 0 0,0 80,432' fill='none' stroke='currentColor'></path>
+<path d='M 96,416 A 16,16 0 0,1 112,432' fill='none' stroke='currentColor'></path>
+<path d='M 0,432 A 16,16 0 0,0 16,448' fill='none' stroke='currentColor'></path>
+<path d='M 32,432 A 16,16 0 0,1 16,448' fill='none' stroke='currentColor'></path>
+<path d='M 80,432 A 16,16 0 0,0 96,448' fill='none' stroke='currentColor'></path>
+<path d='M 112,432 A 16,16 0 0,1 96,448' fill='none' stroke='currentColor'></path>
+<path d='M 296,448 A 16,16 0 0,0 280,464' fill='none' stroke='currentColor'></path>
+<path d='M 296,448 A 16,16 0 0,1 312,464' fill='none' stroke='currentColor'></path>
+<path d='M 280,464 A 16,16 0 0,0 296,480' fill='none' stroke='currentColor'></path>
+<path d='M 312,464 A 16,16 0 0,1 296,480' fill='none' stroke='currentColor'></path>
+<text text-anchor='middle' x='16' y='68' fill='currentColor' style='font-size:1em'>1</text>
+<text text-anchor='middle' x='16' y='228' fill='currentColor' style='font-size:1em'>1</text>
+<text text-anchor='middle' x='16' y='436' fill='currentColor' style='font-size:1em'>1</text>
+<text text-anchor='middle' x='56' y='20' fill='currentColor' style='font-size:1em'>2</text>
+<text text-anchor='middle' x='56' y='180' fill='currentColor' style='font-size:1em'>2</text>
+<text text-anchor='middle' x='56' y='388' fill='currentColor' style='font-size:1em'>2</text>
+<text text-anchor='middle' x='96' y='68' fill='currentColor' style='font-size:1em'>3</text>
+<text text-anchor='middle' x='96' y='228' fill='currentColor' style='font-size:1em'>3</text>
+<text text-anchor='middle' x='96' y='436' fill='currentColor' style='font-size:1em'>3</text>
+<text text-anchor='middle' x='184' y='20' fill='currentColor' style='font-size:1em'>4</text>
+<text text-anchor='middle' x='184' y='180' fill='currentColor' style='font-size:1em'>4</text>
+<text text-anchor='middle' x='184' y='388' fill='currentColor' style='font-size:1em'>4</text>
+<text text-anchor='middle' x='296' y='20' fill='currentColor' style='font-size:1em'>5</text>
+<text text-anchor='middle' x='296' y='100' fill='currentColor' style='font-size:1em'>6</text>
+<text text-anchor='middle' x='296' y='180' fill='currentColor' style='font-size:1em'>5</text>
+<text text-anchor='middle' x='296' y='260' fill='currentColor' style='font-size:1em'>6</text>
+<text text-anchor='middle' x='296' y='388' fill='currentColor' style='font-size:1em'>5</text>
+<text text-anchor='middle' x='296' y='468' fill='currentColor' style='font-size:1em'>6</text>
+</g>
+</svg>
