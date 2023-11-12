@@ -135,17 +135,16 @@ we used to maintain the order of the heap. Then we need to
 adjust the position of the this updated entry if its current
 position violates the invariance of a heap. The `heap.Fix(h heap.Interface, i int)`
 method is what we need here. But in order to call `Fix`,
-we need to know where the entry is within the heap. I am
-not sure what is the "best" way to do this. What I usually do
-is to store the index together with the actual data as an
-entry in the heap. Every time this entry gets moved, we
-need to update the index as well to match its current position.
+we need to know where the entry is within the heap. So this
+means you need to keep track of the position of each entry in
+the heap. And every time this entry gets moved, we need to
+update the index as well to match its current position.
 This can be done in the `Swap(i, j int)` method we implemented
 for the `heap.Interface`.
 
 ```go
 type entry struct {
-        val, pos int // value stored and its position
+        val, pos int // assume we store position along with value in heap
 }
 
 type minHeap []entry
@@ -165,11 +164,127 @@ index in the heap. If you are pushing new entries, assign `h.Len()`
 to `pos` before you append it to the underlying array. With this,
 now you can fix the position of an entry after updating its
 value by invoking `heap.Fix(&h, entry.pos)`. A good example
-(I can come up with off the top of my head) of when we need this
-is when implementing the [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+of this usage is when implementing the [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 which requires a heap to find the next vertex with the shortest
-distance away from the source vertex so that the algorithm will
-run more efficiently.
+distance away from the source vertex efficiently.
+Then use `heap.Fix` to update its neighbors' distance till every
+node in the graph is processed.
+I will use [2642. Design Graph With Shortest Path Calculator](https://leetcode.com/problems/design-graph-with-shortest-path-calculator/description/)
+from LeetCode to demonstrate this in action. Feel free to give
+it a try yourself before peeking at the solution below.
+
+<details>
+<summary>Expand to see solution</summary>
+
+```go
+const INF = math.MaxInt - 1e6
+
+type node struct {
+	pos, dis int
+}
+
+type Graph struct {
+	hlen  int
+	h     []int
+	nodes []node
+	adj   []*list.List
+}
+
+func (g Graph) Len() int {
+	return g.hlen
+}
+
+func (g Graph) Less(i, j int) bool {
+	return g.nodes[g.h[i]].dis < g.nodes[g.h[j]].dis
+}
+
+func (g Graph) Swap(i, j int) {
+	g.h[i], g.h[j] = g.h[j], g.h[i]
+	g.nodes[g.h[i]].pos = i
+	g.nodes[g.h[j]].pos = j
+}
+
+func (g *Graph) Push(x any) {
+	g.h = append(g.h, x.(int))
+	g.hlen++
+}
+
+func (g *Graph) Pop() any {
+	x := g.h[g.hlen-1]
+	g.hlen--
+	return x
+}
+
+func Constructor(n int, edges [][]int) Graph {
+	adj := make([]*list.List, n)
+
+	for _, e := range edges {
+		from := e[0]
+		if adj[from] == nil {
+			adj[from] = list.New()
+		}
+		adj[from].PushFront(e)
+	}
+
+	return Graph{
+		hlen:  n,
+		h:     make([]int, n),
+		nodes: make([]node, n),
+		adj:   adj,
+	}
+}
+
+func (g *Graph) AddEdge(edge []int) {
+	from := edge[0]
+	if g.adj[from] == nil {
+		g.adj[from] = list.New()
+	}
+	g.adj[from].PushFront(edge)
+}
+
+func (g *Graph) ShortestPath(node1 int, node2 int) int {
+	for i := range g.h {
+		g.h[i] = i
+		g.nodes[i].pos = i
+		g.nodes[i].dis = INF
+	}
+
+	g.nodes[node1].dis = 0
+	g.hlen = len(g.h)
+	heap.Init(g)
+
+	for g.hlen > 0 {
+		from := heap.Pop(g).(int)
+		g.nodes[from].pos = -1
+		if g.adj[from] == nil || g.nodes[from].dis == INF {
+			continue
+		}
+
+		elem := g.adj[from].Front()
+		for elem != nil {
+			to, cost := elem.Value.([]int)[1], elem.Value.([]int)[2]
+			if g.nodes[to].pos >= 0 {
+				g.nodes[to].dis = min(g.nodes[to].dis, g.nodes[from].dis+cost)
+				heap.Fix(g, g.nodes[to].pos)
+			}
+			elem = elem.Next()
+		}
+	}
+
+	if g.nodes[node2].dis == INF {
+		return -1
+	}
+	return g.nodes[node2].dis
+}
+
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
+	return y
+}
+```
+</details>
 
 That's all I want to share in this post. Hope there's something
 useful to you. I will definitely update this post in the future
