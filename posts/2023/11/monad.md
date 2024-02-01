@@ -300,7 +300,7 @@ like the one shown below. The types `Char` and `Int` in the function definition 
 and output types. The state management done by our state transformer is completely under the water
 so the details won't be visible to the user and they can focus on things they care about.
 
-![](./0000000005-monad/st-monad-mental-model.png)
+![](./monad/st-monad-mental-model.png)
 
 ### Conclusion
 
