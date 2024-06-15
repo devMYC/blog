@@ -1,5 +1,5 @@
 // import blog from 'https://deno.land/x/blog@0.3.3/blog.tsx';
-import blog from 'https://raw.githubusercontent.com/devMYC/deno_blog/9ec11fd46a4f5dba23a5dc29e7a86d8e393278f9/blog.tsx';
+import blog from 'https://raw.githubusercontent.com/devMYC/deno_blog/e4aca2327af577f63a86cf2aa6aefb7c35956634/blog.tsx';
 
 blog({
     title: 'Yichao Ma',
