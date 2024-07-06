@@ -183,24 +183,18 @@ Let's maintain a number on the server, and run a [FizzBuzz](https://en.wikipedia
 using this number. We will incease the number by 1 every 2.5 seconds. The output of FizzBuzz will be
 sent to each connected client. We will use `timestamp` and `fizzbuzz` as the event names.
 
-```diff
+```ts
 Deno.serve((_req) => {
--   let stop = false;
-+   const ctx = { stop: false }
+    const ctx = { stop: false }
     const rs = new ReadableStream({
         async start(controller) {
--           while (!stop) {
--               controller.enqueue(new Date().toISOString() + "\n");
--               await sleep(1000);
--           }
-+           await Promise.all([
-+               fizzBuzz(controller, ctx),
-+               clock(controller, ctx),
-+           ]);
+            await Promise.all([
+                fizzBuzz(controller, ctx),
+                clock(controller, ctx),
+            ]);
         },
         cancel() {
--           stop = true;
-+           ctx.stop = true;
+            ctx.stop = true;
         },
     });
 
@@ -218,50 +212,50 @@ function sleep(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-+const state: Readonly<{ n: number }> = (() => {
-+    const state = { n: 1 };
-+    setInterval(() => { ++state.n; }, 2500);
-+    return state;
-+})();
- 
-+async function fizzBuzz(
-+    controller: ReadableStreamDefaultController<unknown>,
-+    ctx: Readonly<{ stop: boolean }>,
-+) {
-+    let n = state.n; // copy current state as init value for each connection
-+    let s: string;
-+
-+    while (!ctx.stop) {
-+        if (n%15 === 0) {
-+            s = "FizzBuzz";
-+        } else if (n%3 === 0) {
-+            s = "Fizz";
-+        } else if (n%5 === 0) {
-+            s = "Buzz";
-+        } else {
-+            s = n.toString();
-+        }
-+
-+        n++;
-+        controller.enqueue(
-+            "event: fizzbuzz\n" +
-+            "data: " + s + "\n\n",
-+        );
-+        await sleep(2500);
-+    }
-+}
- 
-+async function clock(
-+    controller: ReadableStreamDefaultController<unknown>,
-+    ctx: Readonly<{ stop: boolean }>,
-+) {
-+    while (!ctx.stop) {
-+        controller.enqueue(
-+            "event: timestamp\n" +
-+            "data: " + JSON.stringify({ ts: new Date().toISOString() }) + "\n\n",
-+        );
-+        await sleep(1000);
-+    }
-+}
+const state: Readonly<{ n: number }> = (() => {
+    const state = { n: 1 };
+    setInterval(() => { ++state.n; }, 2500);
+    return state;
+})();
+
+async function fizzBuzz(
+    controller: ReadableStreamDefaultController<unknown>,
+    ctx: Readonly<{ stop: boolean }>,
+) {
+    let n = state.n; // copy current state as init value for each connection
+    let s: string;
+
+    while (!ctx.stop) {
+        if (n%15 === 0) {
+            s = "FizzBuzz";
+        } else if (n%3 === 0) {
+            s = "Fizz";
+        } else if (n%5 === 0) {
+            s = "Buzz";
+        } else {
+            s = n.toString();
+        }
+
+        n++;
+        controller.enqueue(
+            "event: fizzbuzz\n" +
+            "data: " + s + "\n\n",
+        );
+        await sleep(2500);
+    }
+}
+
+async function clock(
+    controller: ReadableStreamDefaultController<unknown>,
+    ctx: Readonly<{ stop: boolean }>,
+) {
+    while (!ctx.stop) {
+        controller.enqueue(
+            "event: timestamp\n" +
+            "data: " + JSON.stringify({ ts: new Date().toISOString() }) + "\n\n",
+        );
+        await sleep(1000);
+    }
+}
 ```
 
