@@ -183,7 +183,7 @@ Let's maintain a number on the server, and run a [FizzBuzz](https://en.wikipedia
 using this number. We will incease the number by 1 every 2.5 seconds. The output of FizzBuzz will be
 sent to each connected client. We will use `timestamp` and `fizzbuzz` as the event names.
 
-```ts
+```diff
 Deno.serve((_req) => {
 -   let stop = false;
 +   const ctx = { stop: false }
