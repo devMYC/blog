@@ -88,13 +88,13 @@ would be cleaned up to avoid memory leak.
 
 SSE uses a stream of UTF-8 encoded text as messages. It supports two different message formats:
 
-- &bull; data-only messages
+&bull; data-only messages
 
 ```
 data: content\n\n
 ```
 
-- &bull; named events
+&bull; named events
 
 ```
 event: name\ndata: content\n\n
