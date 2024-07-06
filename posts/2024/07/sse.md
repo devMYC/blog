@@ -88,13 +88,13 @@ would be cleaned up to avoid memory leak.
 
 SSE uses a stream of UTF-8 encoded text as messages. It supports two different message formats:
 
-- data-only messages
+* data-only messages
 
 ```
 data: content\n\n
 ```
 
-- named events
+* named events
 
 ```
 event: name\ndata: content\n\n
@@ -224,7 +224,7 @@ async function fizzBuzz(
     controller: ReadableStreamDefaultController<unknown>,
     ctx: Readonly<{ stop: boolean }>,
 ) {
-    let n = state.n; // copy current state as init value for each connection
+    let n = state.n; // copy global state as init value of local state
     let s: string;
 
     while (!ctx.stop) {
