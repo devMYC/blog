@@ -179,9 +179,11 @@ types of events.
 
 As mentioned earlier, SSE also supports named events which allows us to send different events to
 client through the same connection. In addition to the timestamps we are currently sending to client.
-Let's maintain a number on the server, and run a [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz)
-using this number. We will incease the number by 1 every 2.5 seconds. The output of FizzBuzz will be
-sent to each connected client. We will use `timestamp` and `fizzbuzz` as the event names.
+Let's maintain global state (i.e. a number) so we can run [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz)
+using this number. This global state will be updated every 2.5 seconds. For each connected client,
+it will first grab a copy of the current global state as its initial local state. And it will send
+the output of FizzBuzz based on _local_ state (also updated every 2.5 seconds) to client.
+We will use `timestamp` and `fizzbuzz` as the event names.
 
 ```ts
 Deno.serve((_req) => {
